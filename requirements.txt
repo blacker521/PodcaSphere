@@ -1,0 +1,8 @@
+torch>=1.13
+torchaudio
+modelscope
+fastapi
+uvicorn[standard]
+transformers
+pyannote.audio
+accelerate
