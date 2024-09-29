@@ -35,13 +35,14 @@
 
 ## ToDo
 
-- [ ] WebUI页面
+- [x] WebUI页面
 - [ ] 支持将文稿文件作为知识/历史记录发送给LLM模型
 - [ ] 支持声纹库，通过声纹库识别说话人名称，并写入向量库
 - [ ] 支持SenseVoice模型和CosyVoice模型的一键音色克隆
 - [ ] 支持通过选择人物进行说话方式的Lora微调
 - [ ] 支持实时语音识别
 - [ ] 支持onnx模型加速
+
 ## 致谢
 
 - [insanely-fast-whisper-api](https://github.com/JigsawStack/insanely-fast-whisper-api)

@@ -5,4 +5,5 @@ fastapi
 uvicorn[standard]
 transformers
 pyannote.audio
-accelerate
+accelerate 
+gradio==4.44.0

@@ -3,8 +3,11 @@
 @date: 2024/6/18
 @filename: webui
 """
+import threading
 from app.uitls.load_yaml import load
+import gradio as gr
 
+from app.webui.audio_webui import AudioWebUI
 CONFIG_PATH = "configs/deploy.yaml"
 config = load(CONFIG_PATH)
 
@@ -23,8 +26,17 @@ def api_only():
 
 
 def webui():
-    pass
+    interface = gr.Blocks(title='PodcaSphere')
+    with interface:
+        with gr.Tab('PodcaSphere'):
+            AudioWebUI(config["webui"])
+    interface.launch(inbrowser=True, share=True, server_name=config["webui"]["host"], server_port=config["webui"]["port"])
+
 
 
 if __name__ == "__main__":
-    api_only()
+    api_thread = threading.Thread(target=api_only)
+    api_thread.daemon = True
+    api_thread.start()
+    webui()
+    

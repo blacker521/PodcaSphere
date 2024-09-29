@@ -5,11 +5,16 @@ api:
   timeout_keep_alive: 3000
   host: 0.0.0.0
   port: 8194
+webui:
+  host: 0.0.0.0
+  rqs_host: 0.0.0.0
+  rqs_port: 8194
+  port: 8195
 diarize:
   device: cuda:1
   checkpoint_path: pyannote/speaker-diarization-3.1
-  hf_token: ${hf_token}
+  hf_token: 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
 whisper:
   device: cuda:0
   checkpoint_path: openai/whisper-large-v3
-  hf_token: ${hf_token}
+  hf_token: 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
