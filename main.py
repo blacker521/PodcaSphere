@@ -27,7 +27,7 @@ def api_only():
 
 
 def webui():
-        api_thread = threading.Thread(target=api_only)
+    api_thread = threading.Thread(target=api_only)
     api_thread.daemon = True
     api_thread.start()
     interface = gr.Blocks(title='PodcaSphere')
@@ -41,5 +41,4 @@ def webui():
 
 
 if __name__ == "__main__":
-
     webui()

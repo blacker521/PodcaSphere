@@ -15,9 +15,15 @@ class ChatWebui:
         self.context = []
         json_files = [f for f in os.listdir('tmp/') if f.endswith('.json')]
         json_files = gr.CheckboxGroup(choices=json_files, value=json_files[:1])
-        file_button = gr.Button("选择作为知识库")
+        with gr.Row():
+            update_button = gr.Button("更新知识库")
+            file_button = gr.Button("选择作为知识库")
         gr.ChatInterface(self.predict,submit_btn="提交",retry_btn="重试",undo_btn="撤销",clear_btn="清除")
         file_button.click(fn=self.read_speech_json,inputs=[json_files])
+        update_button.click(fn=self.update_files,outputs=json_files)
+    def update_files(self):
+        json_files = [f for f in os.listdir('tmp/') if f.endswith('.json')]
+        return gr.update(choices=json_files)
     def read_speech_json(self,json_files):
         self.context = []
         for json_file in json_files:
