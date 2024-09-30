@@ -7,3 +7,4 @@ transformers
 pyannote.audio
 accelerate 
 gradio==4.44.0
+openai

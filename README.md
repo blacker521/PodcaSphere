@@ -41,7 +41,7 @@ Using the endpoint that ends with `async/` allows you to submit task tasks, you 
 ## To Do
 
 - [x] Web UI page
-- [ ] Support sending script files as knowledge/history records to the LLM model.
+- [x] Support sending script files as knowledge/history records to the LLM model.
 - [ ] Support voiceprint library, identify speaker names through voiceprint library and write them into the vector library.
 - [ ] Support one-click voice cloning with SenseVoice model and CosyVoice model.
 - [ ] Support Lora fine-tuning for speaking style by selecting characters.

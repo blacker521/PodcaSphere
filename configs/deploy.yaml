@@ -10,11 +10,16 @@ webui:
   rqs_host: 0.0.0.0
   rqs_port: 8194
   port: 8195
+openai:
+  base_url: http://0.0.0.0:8023/v1
+  api_key: xxx
+  model: Qwen2-7B
+  temp: 0.7
 diarize:
   device: cuda:1
   checkpoint_path: pyannote/speaker-diarization-3.1
-  hf_token: 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
+  hf_token: ${hf_token}
 whisper:
   device: cuda:0
   checkpoint_path: openai/whisper-large-v3
-  hf_token: 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
+  hf_token: ${hf_token}
